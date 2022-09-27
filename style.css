@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Inter&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.parent {
+    display: grid;
+    grid-template: auto 1fr auto / auto 1fr auto;
+}
+
+.content {
+    grid-column: 1 / 4;
+    display: grid;
+    padding: 0 2rem;
+}
+
+.main-content {
+    border: 1px solid black;
+    display: grid;
+    padding: 2rem;
+}
+
+.header, .section-title, .term {
+    font-family: 'Fraunces', serif;
+}
+
+p, .menu {
+    font-family: 'Inter', sans-serif;
+    /* default font size 16pt*/
+    font-size: 1rem;
+}
+
+.section-title {
+    font-size: 3rem;
+    grid-column: 1/2;
+}
+
+.intro {
+    font-size: 5.5vw;
+    padding: 6rem;
+}
+
+.section-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.section-description, .subhead {
+    font-size: 1.5rem;
+    display: inline;
+    margin: 0;
+}
+
+
+
+/* .section-description {
+    grid-column: 2/4;
+    justify-self: end;
+} */
+
+.header {
+    grid-column: 1 / 4;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+
+.iframe-parent {
+    display: block;
+    width: 100%;
+}
+
+.iframe-container {
+    position: relative;
+    padding-top: 56.25%;
+}
+
+
+
+
+
+
+
+
+
+.menu {
+    padding: 2rem;
+    grid-column: 1 / 4;
+    display: grid;
+    align-items: center;
+}
+
+.menu ul {
+    list-style: none;
+    display: inline;
+    grid-column: 1/3;
+    margin: 0;
+    padding: 0;
+}
+
+
+.menu ul li {
+    display: inline;
+    padding: 0.5rem 2rem 0.5625rem 0;
+}
+
+.cta {
+    display: inline;
+    justify-self: end;
+    grid-column: 3/4;
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1.125rem 0.5625rem;
+    border-radius: 100px;
+}
+
+/* .arrow:before {
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    height: 4.8rem;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 4.8rem;
+    z-index: 1;
+} */
+
+.arrow {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    box-sizing: content-box;
+    height: 0.5rem;
+    width: 1.25rem;
+    z-index: 1;
+    overflow: visible;
+}
+
+.arrow-line{
+    background-color: white;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    transform-origin: right;
+    width: 100%;
+}
+
+
+
