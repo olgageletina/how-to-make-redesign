@@ -48,31 +48,166 @@
                 <div class="iframe-parent">
                     <div class="iframe-container">
                         <!-- autoplay=1&amp;muted=1&amp;loop=1 -->
-                        <iframe src="https://player.vimeo.com/video/198545825"
-                            frameborder="0" allow="autoplay; fullscreen"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;" class=" lazyloaded"></iframe>
+                        <iframe src="https://player.vimeo.com/video/198545825" frameborder="0"
+                            allow="autoplay; fullscreen" style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                            class=" lazyloaded"></iframe>
                     </div>
                 </div>
+                <div class="col-1-3 padded-bottom">
+                    <div class="subhead">
+                        A dance party for one
+                    </div>
+                    <p>The proposal I submitted at the beginning of the class was a responsive light installation. I
+                        imagined the work would accompany a concert.
+                    </p>
+                    <p>
+                        The logic seemed simple – lights, projection, and an algorithm. In terms of aesthetic, what I
+                        had in mind are dreamy constellations. I initially hoped to go fully analog – relying more on
+                        physics and less on digital technology.
+                    </p>
+                </div>
+                <div class="col-1-3 padded-top">
+                    <div class="subhead">Material</div>
+                    <img src="files/img/final_metal.jpg" alt="">
+                    <img src="files/img/final_polycarb.jpg" alt="">
+                    <p>After experimenting with glass, realized I would have to commission a custom piece, which would
+                        be expensive. My classmate Dan recommended polycarbonate – a cheap material with optic
+                        properties. When heated, polycarbonate fractures internally and refracts. To amplify this
+                        effect, I lined the bottom of my structure with reflective film.
+                    </p>
+                    <p>To house the wiring, I made the base out of sheet metal steel. The process was much smoother than
+                        my first attempt at working with the medium.</p>
+                </div>
+                <div class="col-2-3 padded-top">
+                    <div class="subhead">Electronics</div>
+                    <img src="files/img/final_ledarray.jpg" alt="">
+                    <img src="files/img/final_electronics.png" alt="">
+                    <p>Initially I wanted to use water at the base of the structure, but I quickly realized that water
+                        and electronics don’t mix well. Instead, I adapted Neil's LED array. Using the vinyl cutter, I
+                        cut traces out of a flexible copper sheet then mounted those to a large piece of foam core.
+                        Having had established a serial connection in a couple of weeks prior I programmed the array to
+                        communicate with my microphone board.</p>
+                </div>
+                <div class="col-3-3 padded-top">
+                    <div class="subhead">Algorithm</div>
+                    <img src="files/img/final-fair.jpg" alt="">
+                    <p>The question of what aspect of music I wanted to illustrate loomed over me. Is it amplitude,
+                        pitch, frequency? My original intention was to have an algorithm in place that tracks subtle
+                        audio qualities without being too obvious. </p>
+                    <p>Much like the other aspects of the project, my vision changed with time. I went with rhythm. The
+                        decision was subjective though I was influenced by dance parties. To capture rhythm, I
+                        programmed my microphone board with a beat detection algorithm.</p>
+                </div>
 
+                <div class="col-full padded-top">
+                    <img src="files/img/final-project.png" alt="">
+                </div>
+                <div class="col-1-3 padded-bottom">
+                    <div class="subhead">
+                        Conclusive thoughts
+                    </div>
+                    <p>I am underwhelmed with the outcome of my project. Having said that, I think it’s a step in the
+                        right direction. I’d love to explore analog alternatives and scale the project to fill a stage.
+                    </p>
+                </div>
+                <div class="col-full padded-top">
+                    <div class="subhead">Analog addendum</div>
+                    <img src="files/img/final-analog inverted.png" alt="">
+                </div>
+                <div class="col-1-3 padded-bottom">
+                    <p>After taking Physics 123 with Tom Hayes at Harvard, I decided to revist this project but do it
+                        using analog components. An approach that is not only more economic in terms of $$$ but also
+                        seemed more intuitive to me. Sound is an analog phenomenon so it makes sense to analyze it using
+                        analog parts. Moreover, for a novice, a simpler approach is less dizzying and intimidating, thus
+                        going further in terms of academic purposes.
+                    </p>
+                    <p>
+                        Some notes on the schematic: the signal is picked up by a microphone and amplified using an
+                        op-amp. It is then fed into a comparator directly (a potentiometer can be used to tweak the
+                        voltage level) and through a leaky peak detector comprised of a diode, two
+                        resistors, and a capacitor. The output of the comparator then turns an LED on or off, thus
+                        flickering with the beat.</p>
+                </div>
             </div>
         </div>
 
-        <div class="content">
-
+        <div class="content margin-top-lg">
+            <div class="section-header">
+                <span class="section-title">Weekly logs</span>
+                <p class="section-description">Process and challenges</p>
+            </div>
+            <div class="main-content weeklies">
+                
+            </div>
         </div>
 
-        <div class="content">
+        <div class="content margin-top-lg">
+            <div class="section-header">
+                <span class="section-title">Notes</span>
+                <p class="section-description">Random class wormholes</p>
+            </div>
+            <div class="main-content defs">
+                <div class="definition col-full">
+                    <div class="term">Acrylonitrile Butadiene Styrene (ABS)</div>
+                    <p>thermoplastic polymer, is amorphous and doesn't have a true melting point, can be carcinogenic at
+                        higher temperatures (~400 °C)</p>
+                </div>
+                <div class="definition col-full">
+                    <div class="term">Alternating Current (AC)</div>
+                    <p>current in which the flow of electrical charge periodically reverses direction</p>
+                </div>
+            </div>
+
 
         </div>
 
         <footer>
-            <div class="header">
+            <div class="footer-container">
+                <div class="intro child">If I can do it, so can you</div>
+                <div class="child">
+                    <div>
+                        <p>This was my favorite class. How to Make (almost) Anything gave me a holistic perspective on
+                            technology. I felt empowered and fortunate to hone my craft. My hope is to pass this feeling
+                            forward. I’d love for this site to be a useful source of encouragement. I made it using CSS,
+                            HTML, and Javascript. To see more of my work or to get in touch, visit <a
+                                href="https://geletina.com/">geletina.com</a>.</p>
 
-            </div>
-            <div class="ticker">
-
-            </div>
+                    </div>
         </footer>
+        <div class="marquee col-full">
+            <div>
+            <div class="marquee__inner">
+                <p>Happy making</p>
+                <p>Happy making</p>
+                <p>Happy making</p>
+                <p>Happy making</p>
+                <p>Happy making</p>
+                <p>Happy making</p>
+                <p>Happy making</p>
+                <p>Happy making</p>
+                <p>Happy making</p>
+                <p>Happy making</p>
+                <p>Happy making</p>
+                <p>Happy making</p>
+                <p>Happy making</p>
+            </div>
+            <div class="marquee__inner">
+                <p>Happy making</p>
+                <p>Happy making</p>
+                <p>Happy making</p>
+                <p>Happy making</p>
+                <p>Happy making</p>
+                <p>Happy making</p>
+                <p>Happy making</p>
+                <p>Happy making</p>
+                <p>Happy making</p>
+                <p>Happy making</p>
+                <p>Happy making</p>
+                <p>Happy making</p>
+                <p>Happy making</p>
+            </div>
+        </div>
+        </div>
 
     </div>
 </body>
