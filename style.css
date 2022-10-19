@@ -5,17 +5,22 @@ body {
     margin: 0;
 }
 
-.intro, .section-title, .term {
+.intro,
+.section-title,
+.term {
     font-weight: 200;
     font-family: 'Fraunces', serif;
 }
 
-p, .menu, .subhead {
+p,
+.menu,
+.subhead {
     font-family: 'Inter', sans-serif;
-    
+
 }
 
-p, .menu {
+p,
+.menu {
     /* default font size 16pt*/
     font-size: 1rem;
 }
@@ -24,13 +29,13 @@ p, .menu {
     margin: 0 0 1.25rem 0;
 } */
 
-p  {
+p {
     margin: 0;
 }
 
 .parent {
     display: grid;
-    grid-template: auto 1fr auto / auto 1fr auto;
+    /* grid-template: auto 1fr auto / auto 1fr auto; */
 }
 
 .content {
@@ -39,15 +44,28 @@ p  {
     padding: 0 2rem;
 }
 
-.main-content {
-    border: 1px solid black;
+.main-content, .cell {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     grid-gap: 2rem;
     padding: 2rem;
 }
 
-.header, footer {
+.main-content {
+    border: 1px solid black;
+}
+
+.cell {
+    background-color: white;
+    height: fit-content;
+}
+
+.cell .cell {
+    padding: 0;
+}
+
+.header,
+footer {
     grid-column: 1 / -1;
     display: grid;
     place-items: center;
@@ -66,21 +84,46 @@ p  {
     background-color: black;
 }
 
-.col-1-3 {
-    grid-column: 1/2;
+/* .main-content.weeklies > * {
+    padding: 2rem;
+    background-color: white;
+} */
+
+.col-half-1 {
+    grid-column: 1/7;
 }
 
-.col-2-3 {
-    grid-column: 2/3;
+.col-half-2 {
+    grid-column: 7/-1;
 }
 
-.col-3-3 {
-    grid-column: 3/4;
+.col-third-1 {
+    grid-column: 1/5;
 }
+
+
+.col-third-2 {
+    grid-column: 5/9;
+}
+
+.col-third-3 {
+    grid-column: 9/-1;
+}
+
+
+.col-third-1-2 {
+    grid-column: 1/9;
+}
+
+.col-third-2-3 {
+    grid-column: 5/-1;
+}
+
 
 .col-full {
-    grid-column: 1/4;
+    grid-column: 1/-1;
 }
+
 
 .section-title {
     font-size: 3rem;
@@ -100,7 +143,7 @@ p  {
 }
 
 .term {
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-style: italic;
 }
 
@@ -117,7 +160,7 @@ footer .footer-container {
 .child {
     display: flex;
 }
-  
+
 .child div {
     flex-grow: 1;
     width: 0;
@@ -132,14 +175,19 @@ footer .footer-container {
     padding: 0 2rem 1rem 2rem;
 }
 
-.section-description, .subhead {
-    font-size: 1.5rem;
+.weeklies .section-header {
+    padding: 0 0rem 1rem 0rem;
+}
+
+.section-description,
+.subhead {
+    font-size: 1.375rem;
     margin: 0;
 }
 
 
 .iframe-parent {
-    grid-column: 1/4;
+    grid-column: 1/-1;
     display: block;
     width: 100%;
 }
@@ -151,7 +199,7 @@ footer .footer-container {
 
 .menu {
     padding: 2rem;
-    grid-column: 1/4;
+    grid-column: 1/-1;
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
@@ -203,7 +251,7 @@ footer .footer-container {
     overflow: visible;
 }
 
-.arrow-line{
+.arrow-line {
     background-color: white;
     height: 1px;
     left: 0;
@@ -212,18 +260,39 @@ footer .footer-container {
     width: 100%;
 }
 
+.img-relative-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.img-relative-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    /* height: 100%;  */
+    object-fit: cover;
+}   
+
 
 img {
     width: 100%;
     min-height: 1px;
 }
 
-.padded-top > * {
+
+.padded-top>* {
     padding-top: 1.5rem;
 }
 
-.padded-bottom > *:not(:last-child) {
+.padded-bottom>*:not(:last-child) {
     padding-bottom: 1.5rem;
+}
+
+.padding-bottom-1 {
+    padding-bottom: 0.5rem;
 }
 
 .margin-top-lg {
@@ -244,7 +313,7 @@ a {
 }
 
 .marquee div {
-    display:flex;
+    display: flex;
     flex-wrap: nowrap;
     white-space: nowrap;
 }
@@ -259,18 +328,27 @@ a {
     display: flex;
     flex-shrink: 0;
     will-change: transform;
-    animation: marquee 16s linear infinite;
+    animation: marquee 18s linear infinite;
     animation-play-state: running;
+}
+
+.light {
+    color: white;
 }
 
 
 @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
     .marquee__inner {
-      animation: none;
+        animation: none;
     }
-  }
+}
