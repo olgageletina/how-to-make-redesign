@@ -697,9 +697,12 @@ a.link-type-menu:hover::after, .definition.col-full.stroke.scrolled::after, .cel
 
     .hamburger {
         display: block;
+        padding-bottom: 0.4375rem; 
+        /* manual centering with button */
     }
 
     .menu {
+        padding: 1.5rem 1rem ;
         grid-template-columns: auto 1fr;
     }
 

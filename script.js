@@ -64,7 +64,9 @@ function initPage() {
 
 function showNav() {
   const currentScroll = window.pageYOffset;
-    // console.log(currentScroll);
+  // console.log('last: ' + currentScroll);
+  // console.log('last: ' + lastScroll);
+
   if (currentScroll <= 0) {
     nav.classList.remove("hide-nav-top");
     return;
@@ -73,13 +75,10 @@ function showNav() {
     currentScroll > lastScroll 
     && lastScroll > 0
   ) {
-
     nav.classList.remove("hide-nav-top");
     nav.classList.add("display-nav-top");
-    // console.log("down");
   } else if (
     currentScroll < lastScroll 
-    && nav.classList.contains("display-nav-top")
   ) {
     //scroll up
     nav.classList.remove("display-nav-top");
