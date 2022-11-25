@@ -11,35 +11,69 @@
 
 <body>
     <div class="parent">
-        <div class="menu">
+        <div class="menu" id="top-nav">
             <ul class="main">
-                <li>Final project</li>
-                <li>Weekly logs</li>
-                <li>Notes</li>
-                <li>About</li>
+                <li><a href="/#final" class="link-type-menu">Final project</a></li>
+                <li><a href="/#weekly-logs" class="link-type-menu">Weekly logs</a></li>
+                <li><a href="/#notes" class="link-type-menu"> Notes</a></li>
+                <li><a href="/#about" class="link-type-menu"> About </a></li>
             </ul>
-
-            <div class="cta">
-                Olga Geletina
-
-                <div class="arrow ovee-component" data-nav-toggle="menu" aria-controls="menu-menu" aria-expanded="true"
-                    style="transform: translate(0%, -50%);">
-                    <span class="arrow-line arrow-line-first" style="transform: scale(0.6, 1);"></span>
-                    <span class="arrow-line arrow-line-second"
-                        style="opacity: 1; transform-origin: 100% 50%; transform: rotate(-45deg) scale(0.85, 0.85);"></span>
-                    <span class="arrow-line arrow-line-third"
-                        style="transform: translate(0px, 0px) rotate(-90deg) scale(0.6, 1); transform-origin: 100% 50%;"></span>
+            <div id="menu-burger" onclick="toggleNav()">
+                <div class="hamburger">
+                    <div class="burger-line top"></div>
+                    <div class="burger-line center"></div>
+                    <div class="burger-line bottom"></div>
                 </div>
             </div>
 
+            
+            <div class="cta">
+                <a href="https://geletina.com/" target="_blank">
+                Olga Geletina
+
+                <div class="arrow" >
+                    <span class="arrow-line arrow-line-first"></span>
+                    <span class="arrow-line arrow-line-second"></span>
+                    <span class="arrow-line arrow-line-third"></span>
+                </div>
+            </a>
+                
+            </div>            
+
         </div>
+
+                    <!-- mobile menu -->
+                    <div id="mobile-nav" aria-hidden="true">
+                        <ul class="mobile-links" onclick="toggleNav()">
+                            <li class="mobile-row">
+                                <a href="/#final" class="section-title">
+                                    Final project
+                                </a>
+                            </li>
+                            <li class="mobile-row">
+                                <a href="/#weekly-logs" class="section-title">
+                                    Weekly logs
+                                </a>
+                            </li>
+                            <li  class="mobile-row">
+                                <a href="/#notes" class="section-title">
+                                    Notes
+                                </a>
+                            </li>
+                            <li  class="mobile-row">
+                                <a href="/#about" class="burger-link section-title">
+                                    About
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
         <div class="header">
             <div class="intro">Hey, I’m Olga and this my page for <em>How to Make (almost) Anything</em> @MIT
             </div>
         </div>
 
-        <div class="content">
+        <div class="content" id="final">
             <div class="section-header">
                 <span class="section-title">Final project</span>
                 <p class="section-description">Responsive light wraps up my maker journey</p>
@@ -49,112 +83,1031 @@
                     <div class="iframe-container">
                         <!-- autoplay=1&amp;muted=1&amp;loop=1 -->
                         <iframe src="https://player.vimeo.com/video/198545825" frameborder="0"
-                            allow="autoplay; fullscreen" style="position:absolute;top:0;left:0;width:100%;height:100%;"
-                            class=" lazyloaded"></iframe>
+                            allow="autoplay; fullscreen"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
                     </div>
                 </div>
-                <div class="col-1-3 padded-bottom">
-                    <div class="subhead">
-                        A dance party for one
+                <div class="col-half-1">
+                    <div class="caption">
+                        <div class="subhead">
+                            A dance party for one
+                        </div>
+                        <p>The proposal I submitted at the beginning of the class was a responsive light installation. I
+                            imagined the work would accompany a concert.
+                        </p>
+                        <p>
+                            The logic seemed simple – lights, projection, and an algorithm. In terms of aesthetic, what
+                            I
+                            had in mind are dreamy constellations. I initially hoped to go fully analog – relying more
+                            on
+                            physics and less on digital technology.
+                        </p>
                     </div>
-                    <p>The proposal I submitted at the beginning of the class was a responsive light installation. I
-                        imagined the work would accompany a concert.
-                    </p>
-                    <p>
-                        The logic seemed simple – lights, projection, and an algorithm. In terms of aesthetic, what I
-                        had in mind are dreamy constellations. I initially hoped to go fully analog – relying more on
-                        physics and less on digital technology.
-                    </p>
                 </div>
-                <div class="col-1-3 padded-top">
-                    <div class="subhead">Material</div>
+                <div class="col-third-1 padded-top">
                     <img src="files/img/final_metal.jpg" alt="">
                     <img src="files/img/final_polycarb.jpg" alt="">
-                    <p>After experimenting with glass, realized I would have to commission a custom piece, which would
-                        be expensive. My classmate Dan recommended polycarbonate – a cheap material with optic
-                        properties. When heated, polycarbonate fractures internally and refracts. To amplify this
-                        effect, I lined the bottom of my structure with reflective film.
-                    </p>
-                    <p>To house the wiring, I made the base out of sheet metal steel. The process was much smoother than
-                        my first attempt at working with the medium.</p>
+                    <div class="caption">
+                        <div class="subhead">Material</div>
+                        <p>After experimenting with glass, realized I would have to commission a custom piece, which
+                            would
+                            be expensive. My classmate Dan recommended polycarbonate – a cheap material with optic
+                            properties. When heated, polycarbonate fractures internally and refracts. To amplify this
+                            effect, I lined the bottom of my structure with reflective film.
+                        </p>
+                        <p>To house the wiring, I made the base out of sheet metal steel. The process was much smoother
+                            than
+                            my first attempt at working with the medium.</p>
+                    </div>
                 </div>
-                <div class="col-2-3 padded-top">
-                    <div class="subhead">Electronics</div>
+                <div class="col-third-2 padded-top">
                     <img src="files/img/final_ledarray.jpg" alt="">
-                    <img src="files/img/final_electronics.png" alt="">
-                    <p>Initially I wanted to use water at the base of the structure, but I quickly realized that water
-                        and electronics don’t mix well. Instead, I adapted Neil's LED array. Using the vinyl cutter, I
-                        cut traces out of a flexible copper sheet then mounted those to a large piece of foam core.
-                        Having had established a serial connection in a couple of weeks prior I programmed the array to
-                        communicate with my microphone board.</p>
+                    <img src="files/img/final_electronics.jpg" alt="">
+                    <div class="caption">
+                        <div class="subhead">Electronics</div>
+                        <p>Initially I wanted to use water at the base of the structure, but I quickly realized that
+                            water
+                            and electronics don’t mix well. Instead, I adapted Neil's LED array. Using the vinyl cutter,
+                            I
+                            cut traces out of a flexible copper sheet then mounted those to a large piece of foam core.
+                            Having had established a serial connection in a couple of weeks prior I programmed the array
+                            to
+                            communicate with my microphone board.</p>
+                    </div>
                 </div>
-                <div class="col-3-3 padded-top">
-                    <div class="subhead">Algorithm</div>
+                <div class="col-third-3 padded-top">
                     <img src="files/img/final-fair.jpg" alt="">
-                    <p>The question of what aspect of music I wanted to illustrate loomed over me. Is it amplitude,
-                        pitch, frequency? My original intention was to have an algorithm in place that tracks subtle
-                        audio qualities without being too obvious. </p>
-                    <p>Much like the other aspects of the project, my vision changed with time. I went with rhythm. The
-                        decision was subjective though I was influenced by dance parties. To capture rhythm, I
-                        programmed my microphone board with a beat detection algorithm.</p>
+                    <div class="caption">
+                        <div class="subhead">Algorithm</div>
+                        <p>The question of what aspect of music I wanted to illustrate loomed over me. Is it amplitude,
+                            pitch, frequency? My original intention was to have an algorithm in place that tracks subtle
+                            audio qualities without being too obvious. </p>
+                        <p>Much like the other aspects of the project, my vision changed with time. I went with rhythm.
+                            The
+                            decision was subjective though I was influenced by dance parties. To capture rhythm, I
+                            programmed my microphone board with a beat detection algorithm.</p>
+                    </div>
                 </div>
 
                 <div class="col-full padded-top">
                     <img src="files/img/final-project.png" alt="">
                 </div>
-                <div class="col-1-3 padded-bottom">
-                    <div class="subhead">
-                        Conclusive thoughts
+                <div class="col-half-1">
+                    <div class="caption">
+                        <div class="subhead">
+                            Conclusive thoughts
+                        </div>
+                        <p>I am underwhelmed with the outcome of my project. Having said that, I think it’s a step in
+                            the
+                            right direction. I’d love to explore analog alternatives and scale the project to fill a
+                            stage.
+                        </p>
                     </div>
-                    <p>I am underwhelmed with the outcome of my project. Having said that, I think it’s a step in the
-                        right direction. I’d love to explore analog alternatives and scale the project to fill a stage.
-                    </p>
                 </div>
                 <div class="col-full padded-top">
-                    <div class="subhead">Analog addendum</div>
                     <img src="files/img/final-analog inverted.png" alt="">
                 </div>
-                <div class="col-1-3 padded-bottom">
-                    <p>After taking Physics 123 with Tom Hayes at Harvard, I decided to revist this project but do it
-                        using analog components. An approach that is not only more economic in terms of $$$ but also
-                        seemed more intuitive to me. Sound is an analog phenomenon so it makes sense to analyze it using
-                        analog parts. Moreover, for a novice, a simpler approach is less dizzying and intimidating, thus
-                        going further in terms of academic purposes.
-                    </p>
-                    <p>
-                        Some notes on the schematic: the signal is picked up by a microphone and amplified using an
-                        op-amp. It is then fed into a comparator directly (a potentiometer can be used to tweak the
-                        voltage level) and through a leaky peak detector comprised of a diode, two
-                        resistors, and a capacitor. The output of the comparator then turns an LED on or off, thus
-                        flickering with the beat.</p>
+                <div class="col-half-1">
+                    <div class="caption">
+                        <div class="subhead">Analog addendum</div>
+                        <p>After taking Physics 123 with Tom Hayes at Harvard, I decided to revist this project but do
+                            it
+                            using analog components. An approach that is not only more economic in terms of $$$ but also
+                            seemed more intuitive to me. Sound is an analog phenomenon so it makes sense to analyze it
+                            using
+                            analog parts. Moreover, for a novice, a simpler approach is less dizzying and intimidating,
+                            thus
+                            going further in terms of academic purposes.
+                        </p>
+                        <p>
+                            Some notes on the schematic: the signal is picked up by a microphone and amplified using an
+                            op-amp. It is then fed into a comparator directly (a potentiometer can be used to tweak the
+                            voltage level) and through a leaky peak detector comprised of a diode, two
+                            resistors, and a capacitor. The output of the comparator then turns an LED on or off, thus
+                            flickering with the beat.</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="content margin-top-lg">
+        <div class="content margin-top-lg" id="weekly-logs">
             <div class="section-header">
                 <span class="section-title">Weekly logs</span>
                 <p class="section-description">Process and challenges</p>
             </div>
             <div class="main-content weeklies">
-                
+                <div class="col-full cell stroke">
+                    <div class="col-full">
+                        <div class="term">
+                            Week 1 - CAD + html
+                        </div>
+                    </div>
+                    <div class="col-half-1 title-imgs">
+                        <div class="img-relative-container custom-dark">
+                            <img src="files/img/dodecahedron_cropped.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-half-2 cell">
+                        <div class="col-full">
+                            <img src="files/img/vinyl_cut.jpg" alt="">
+                        </div>
+                        <div class="col-full">
+                            <div class="caption">
+                                <div class="subhead">
+                                    Use a vinyl cutter
+                                </div>
+                                <p>Using the whole width of the vinyl roll, I created a sign for my wall.</p>
+                            </div>
+                        </div>
+                        <div class="col-third-1 padded-top">
+                            <img src="files/img/week-1-result.jpg" alt="">
+                        </div>
+                        <div class="col-third-2 static padded-top">
+                            <img src="files/img/laser-1.jpg" alt="">
+
+                        </div>
+                        <div class="col-third-3 static padded-top">
+                            <img src="files/img/laser-2.jpg" alt="">
+                        </div>
+                        <div class="col-full">
+                            <div class="caption">
+                                <div class="subhead">
+                                    Create a parametric press-fit construction kit
+                                </div>
+                                <p>This was my first time using Rhino's Grasshopper. I was grateful for Nathan's awesome
+                                    tutorial. Following his steps, I made a parametric press-fit dodecahedron (my Rhino
+                                    and
+                                    Grasshopper files). At the base of the structure is a regular pentagon, held
+                                    together
+                                    with circular parts. The joints can be resized dynamically.</p>
+                                <p>I laser cut the pieces of our cardboard which was a forgiving material — all the
+                                    joints
+                                    slid into place.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-full cell stroke">
+                    <div class="col-full">
+                        <div class="term">
+                            Week 2 - make a PCB
+                        </div>
+                    </div>
+
+                    <div class="col-half-1 title-imgs hide">
+                        <div class="img-relative-container top-img">
+                            <img src="files/img/programmer-exacto.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-half-2 cell">
+                        <div class="col-half-1 static">
+                            <img src="files/img/isp_2_edited.jpg" alt="">
+                        </div>
+                        <div class="col-half-2 static">
+                            <img src="files/img/isp_3.jpg" alt="">
+                        </div>
+                        <div class="col-full">
+                            <div class="caption">
+                                <div class="subhead">
+                                    Make a programmer
+                                </div>
+                                <p>This was my first foray into PCB (Printed Circuit Board) production. I kept it simple
+                                    and
+                                    used the boilerplate template from this week's lecture. I named my in-circuit
+                                    programmer
+                                    Gersh.</p>
+                            </div>
+                        </div>
+                        <div class="col-full padded-top">
+                            <img src="files/img/victory.jpg" alt="">
+                            <div class="caption">
+                                <div class="subhead">
+                                    Program the programmer
+                                </div>
+                                <p>Programming the programmer was the sweetest part. Here’s Gersh being recognized by a
+                                    computer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-full cell stroke">
+                    <div class="col-full">
+                        <div class="term">
+                            Week 3 - 3D print and scan
+                        </div>
+                    </div>
+                    <div class="col-half-1 title-imgs">
+                        <div class="img-relative-container custom-light">
+                            <img src="files/img/3ds_1.jpg" alt="">
+                        </div>
+                        <img class="padding-top-4 hide" src="files/img/cube_1.gif" alt="">
+                    </div>
+                    <div class="col-half-2 cell">
+                        <div class="col-third-1 static">
+                            <img src="files/img/3d_1.jpg" alt="">
+                        </div>
+                        <div class="col-third-2 static">
+                            <img src="files/img/3d_2.jpg" alt="">
+                        </div>
+                        <div class="col-third-3 hide">
+                            <img src="files/img/3d_3.jpg" alt="">
+                        </div>
+                        <div class="col-full">
+                            <div class="caption">
+                                <div class="subhead">
+                                    3D print
+                                </div>
+                                <p>I returned to the same shape for this week's assignment. I designed a dodecahedron
+                                    (using
+                                    Rhino) with an inner cube. While learning about the shape I thought it was cool that
+                                    a
+                                    cube can be constructed from the vertices of a dodecahedron (Steinhaus 1999). I also
+                                    wanted to 3D print something that wasn’t possible to make using a subtractive tool
+                                    like
+                                    a CNC. I used the Formalabs and 3DWOX to make models at different scales. The first
+                                    couple of attempts were unsuccessful – not enough support, too little resin,
+                                    excessive
+                                    support, etc, but I eventually got it.</p>
+                            </div>
+                        </div>
+                        <div class="col-half-1 static padded-top">
+                            <img src="files/img/3ds_2-edited.jpg" alt="">
+                        </div>
+                        <div class="col-half-2 static padded-top">
+                            <img src="files/img/3ds_3-edited.jpg" alt="">
+                        </div>
+                        <div class="col-full">
+                            <div class="caption">
+                                <div class="subhead">
+                                    3D Scan
+                                </div>
+                                <p>Next was scanning an object. Sense didn't like scanning my bust or objects smaller
+                                    than a
+                                    handful. It did scan a bottle of Goop soap nicely (Gooop). For my dodecahedron I
+                                    tried
+                                    to use 123D Catch which did not turn out great. I would’ve liked to experiment
+                                    scanning
+                                    against different backgrounds.</p>
+                            </div>
+                        </div>
+                        <div class="col-half-1 static padded-top">
+                            <img src="files/img/heat.jpg" alt="">
+                        </div>
+                        <div class="col-half-2 static padded-top">
+                            <img src="files/img/cube_2.gif" alt="">
+                        </div>
+                        <div class="col-full">
+                            <div class="caption">
+                                <div class="subhead">Scan some more</div>
+                                <p>This 3D heat scan was created in a collaboration with my roommate James Penn. I
+                                    wanted to
+                                    scan a feature that extends beyond what is visible to the naked eye. By capturing
+                                    heat
+                                    dissipation, I was curious to get a sense of the material properties of PLA.</p>
+                                <p>Our set-up included a stepper motor, two breadboards, an Arduino UNO, and a handful
+                                    of
+                                    electrical components, with which James made a makeshift turntable.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-full cell stroke">
+                    <div class="col-full">
+                        <div class="term">Week 4 - electronics design</div>
+                    </div>
+                    <div class="col-half-1 title-imgs">
+                        <div class="img-relative-container full-height">
+                            <img src="files/img/hello_3_edited_larger.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-half-2 cell">
+                        <div class="col-half-1 static">
+                            <img src="files/img/week4-board-1.jpg" alt="">
+                        </div>
+                        <div class="col-half-2 static">
+                            <img src="files/img/week4-board-2.jpg" alt="">
+                        </div>
+                        <div class="col-full">
+                            <div class="caption">
+                                <div class="subhead">
+                                    Hello... Eagle?
+                                </div>
+                                <p>
+                                    This week's assignment was challenging. I thought Eagle was janky (no partial
+                                    search/match).
+                                    The exported outer cut was too thin for the Roland (the table saw came in handy).
+                                    The
+                                    soldering was pretty smooth though. When testing my board, all of the traces seemed
+                                    to
+                                    check
+                                    out.</p>
+                                <p>
+                                    The board above has two additional LED's. Here are my Eagle schematic and board
+                                    files.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-full cell stroke">
+                    <div class="col-full">
+                        <div class="term">
+                            Week 5 - something big
+                        </div>
+                    </div>
+                    <div class="col-half-1 title-imgs">
+                        <div class="img-relative-container full-height">
+                            <img src="files/img/sparky-sparky.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-half-2 cell">
+                        <div class="col-third-1 static">
+                            <img src="files/img/metal_1.jpg" alt="">
+                        </div>
+                        <div class="col-third-2 hide">
+                            <img src="files/img/wood_2.jpg" alt="">
+                        </div>
+                        <div class="col-third-3 static">
+                            <img src="files/img/something-big-edited.jpg" alt="">
+                        </div>
+                        <div class="col-full">
+                            <div class="caption">
+                                <div class="subhead">Big as a collection of many</div>
+                                <p>I chose to interpret this week's assignment differently – rather than making one big
+                                    thing, I
+                                    made a series of smaller things that come together into a bigger thing.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-full padded-top">
+                            <img src="files/img/metal_3.jpg" alt="">
+                        </div>
+                        <div class="col-full">
+                            <div class="caption">
+                                <div class="subhead">
+                                    Metal
+                                </div>
+                                <p>Working with metal has been something I've always wanted to do but I never had access
+                                    to
+                                    a metal shop… until now. I decided to make a light fixture. A cropped pyramid with
+                                    openings from which light would be able to escape. While I was content with my
+                                    design in
+                                    Rhino, the final product was disappointing. On the brighter side, I got to use a
+                                    grinder
+                                    and nibbler. Hammering metal into shape was satisfying, empowering, and addicting.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-full padded-top">
+                            <img src="files/img/wood-cropped.jpg" alt="">
+                        </div>
+                        <div class="col-full">
+                            <div class="caption">
+                                <div class="subhead">
+                                    Wood
+                                </div>
+                                <p>To make home feel more like home, I created two storage units from the wood scraps
+                                    found
+                                    at the GSD.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-full cell stroke">
+                    <div class="col-full">
+                        <div class="term">
+                            Week 6 - program a PCB
+                        </div>
+                    </div>
+
+                    <div class="col-half-1 title-imgs hide">
+                        <div class="img-relative-container custom-light">
+                            <img src="files/img/morti.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-half-2 cell">
+                        <div class="col-full">
+                            <img src="files/img/circuitboard_2.gif" alt="">
+                        </div>
+                        <div class="col-full">
+                            <div class="caption">
+                                <div class="subhead">
+                                    Programming
+                                </div>
+                                <p>I created two programs this week – one to turn on an LED when pressing a button and
+                                    the
+                                    other to echo a phrase typed out into the console. </p>
+                            </div>
+                        </div>
+                        <div class="col-full padded-top">
+                            <img src="files/img/morti-milled.jpg" alt="">
+                        </div>
+                        <div class="col-full">
+                            <div class="caption">
+                                <div class="subhead">
+                                    Morti
+                                </div>
+                                <p>Just for fun, I designed a custom circuit board in Illustrator in the shape of a
+                                    skull
+                                    with two lights for eyes. Illustrator export settings didn’t play well with mods.
+                                    When I
+                                    tried to mill Morti (my name for the circuit board), the traces came out huge. The
+                                    usual
+                                    hack of halving the dimensions didn’t work. I will have to find the factor next
+                                    week.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-full cell stroke">
+                    <div class="col-full">
+                        <div class="term">
+                            Week 7 - molding and casting
+                        </div>
+                    </div>
+                    <div class="col-half-1 title-imgs">
+                        <div class="img-relative-container custom-dark">
+                            <img src="files/img/mold_model_cropped.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-half-2 cell">
+                        <div class="col-half-1 static">
+                            <img src="files/img/moldprocess_1.jpg" alt="">
+                        </div>
+                        <div class="col-half-2 static">
+                            <img src="files/img/moldprocess_2.jpg" alt="">
+                        </div>
+                        <div class="col-half-1 static">
+                            <img src="files/img/mold_1.jpg" alt="">
+                        </div>
+                        <div class="col-half-2 static">
+                            <img src="files/img/mold_2.jpg" alt="">
+                        </div>
+                        <div class="col-full">
+                            <div class="caption">
+                                <div class="subhead">
+                                    Positive to positive mold to negative mold to positive to...
+                                </div>
+                                <p>Having had cast a relief previously, I felt ready. Once again, I set to make a light
+                                    fixture — a hollow shape large enough for a light socket. Working in Rhino, I first
+                                    designed the positive then with Rob’s help I made positive three-piece mold.
+                                </p>
+                                <p>Sunday morning, it was time to mill. While my shape was relatively small, the mold
+                                    positive was still larger than any of the available end mills at the shop. So, on
+                                    Tuesday morning I borrowed a longer bit from the GSD. Once the milling was done, I
+                                    realized I made a few errors. I resolved the errors with some tape, an X-Acto knife,
+                                    and
+                                    a sprinkling of Hydrostone.
+                                    Then came the OOMOO. After vacuuming the substance a few times the mixture was still
+                                    foamy (either due to my poor mixing skills or the compromised A/B parts) – a texture
+                                    my
+                                    final piece inherited.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-half-1 padded-top static">
+                            <img src="files/img/moldpositive_2.jpg" alt="">
+                        </div>
+                        <div class="col-half-2 padded-top static">
+                            <img src="files/img/moldpositive_1.jpg" alt="">
+                        </div>
+                        <div class="col-full">
+                            <div class="caption">
+                                <div class="subhead">
+                                    Results
+                                </div>
+                                <p>
+                                    All's well that ends well though. After freeing my OOMOO negative mold from its
+                                    positive
+                                    part and modifying the negative mold with clay and a blade, I was ready to pour.
+                                    While
+                                    flawed, I was happy with the result. In future castings, I incorporated moss into
+                                    the
+                                    mold for an organic feel.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-full cell stroke">
+                    <div class="col-full">
+                        <div class="term">
+                            Week 8 - input device
+                        </div>
+                    </div>
+
+                    <div class="col-half-1 title-imgs">
+                        <div class="img-relative-container dark hide">
+                            <img src="files/img/analysis-cropped.jpg" alt="">
+                        </div>
+                        <img class="padding-top-4" src="files/img/week-8.gif" alt="">
+                    </div>
+
+                    <div class="col-half-2 cell">
+                        <div class="col-full">
+                            <img src="files/img/board_trace.jpg" alt="">
+                        </div>
+                        <div class="col-full">
+                            <div class="caption">
+                            <div class="subhead">
+                                Beats and such
+                            </div>
+                            <p>This week, I chose to do an analog microphone board, with an additional LED. Designing in
+                                EAGLE, took less time than before (my schematic and board). The milling and soldering
+                                was also smooth sailing. Until...I realized only after my board was finished that one of
+                                the traces wasn’t cut. I X-Acto’ed it but I accidentally cut the wrong trace. Since the
+                                trace was under the microchip, neither a jumper wire nor 0 ohm resistor would work so I
+                                added a piece of copper. AND IT WORKED.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="col-full padded-top">
+                        <div class="iframe-parent">
+                            <div class="iframe-container">
+                                <iframe src="https://player.vimeo.com/video/190877690" frameborder="0"
+                                    allow="autoplay; fullscreen"
+                                    style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-full">
+                            <p>Using the code posted on the website I was able to program the board. My next steps are to understand the python script better along with parsing serial. From there, I would like to set up the LED so that it lights up once the sound level reaches a threshold. And eventually beats.</p>
+                    </div>
+
+                    </div>
+                </div>
+
+                <div class="col-full cell stroke">
+                    <div class="col-full">
+                        <div class="term">
+                            Week 9 - composites
+                        </div>
+                    </div>
+
+                    <div class="col-half-1 title-imgs">
+                        <div class="img-relative-container full-height">
+                            <img src="files/img/composite_edited_3.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-half-2 cell">
+                        <div class="col-half-1 static">
+                            <img src="files/img/composite_1.jpg" alt="">
+                        </div>
+                        <div class="col-half-2 hide">
+                            <img src="files/img/composite_3.jpg" alt="">
+                        </div>
+                        <div class="col-half-1 static">
+                            <img src="files/img/composite_5.jpg" alt="">
+                        </div>
+                        <div class="col-half-2 hide">
+                            <img src="files/img/composite_edited_1.jpg" alt="">
+                        </div>
+
+                        <div class="col-full">
+                            <div class="caption">
+                            <div class="subhead">
+                                Skin
+                            </div>
+                            <p>Inspired by Amir Karimpour, I experimented with Maya to create an interesting form for my
+                                composite. Everything came together nicely. Since the purpose of the work was aesthetic,
+                                I opted for linen in favor of burlap, which I dry fitted by making a few incisions
+                                lining the crevices. The form came out beautifully with a resolution so fine that the
+                                toolpath was apparent.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-full cell stroke">
+                    <div class="col-full">
+                        <div class="term">
+                            Week 10 - output device
+                        </div>
+                    </div>
+                    <div class="col-half-1 title-imgs hide">
+                        <div class="img-relative-container top-img">
+                            <img src="files/img/speaker-board.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-half-2 cell">
+                        <div class="iframe-parent">
+                            <div class="iframe-container">
+                                <iframe src="https://player.vimeo.com/video/192808555" frameborder="0"
+                                    allow="autoplay; fullscreen"
+                                    style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                            </div>
+                        </div>
+
+                        <div class="col-full">
+                            <div class="caption">
+                            <div class="subhead">
+                                Speaker board
+                            </div>
+                            <p>This week I reproduced Neil speaker board (with a few trace modifications) – my EAGLE
+                                schematic and board has a custom 2 pad part. While I was able to program the board using
+                                Neil's C files I was unable to "make it do something." This is what I hope to sort out
+                                for next week, perhaps by starting with Arduino's tone() library. In the meantime,
+                                here's Dixon.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-full cell stroke">
+                    <div class="col-full">
+                        <div class="term">
+                            Week 11 - application
+                        </div>
+                    </div>
+                    <div class="col-half-1 title-imgs">
+                        <div class="img-relative-container">
+                            <img src="files/img/osciliscope-feed.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-half-2 cell">
+                        <div class="col-full">
+
+                            <p>This was a week of epic failure. I decided to use this week to focus on connecting the
+                                dots for my final project. I've set out to get data from my microphone board, process
+                                it, and integrate it into my speaker board. I was able to record data from my microphone
+                                board by tweaking Neil's script, and to successfully trouble shoot my speaker board. The
+                                successes ended there.
+                            </p>
+                            <p>
+                                Recording the byte values and the timestamp yielded some information, it didn’t get me
+                                very far. I had no idea how to parse the information to extract the musical signal. With
+                                the speaker, I realized that the voltage I was supplying to the it was too low. When I
+                                tried the same board with different speakers (a pair with a built-in amplifier) I was
+                                able to hear the sound. To mitigate this, I tried building a non-inverting amplifier
+                                circuit board which I forgot to power. Parsing through the speaker C code didn't get me
+                                far. While the idea for my final project idea is well defined, there are substantial
+                                gaps when it comes to implementation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-full cell stroke">
+                    <div class="col-full">
+                        <div class="term">
+                            Week 12 - wired connections
+                        </div>
+                    </div>
+                    <div class="col-half-1 title-imgs hide">
+                        <div class="img-relative-container top-img">
+                            <img src="files/img/wired-connections.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-half-2 cell">
+                        <div class="iframe-parent">
+                            <div class="iframe-container">
+                                <iframe src="https://player.vimeo.com/video/194680928" frameborder="0"
+                                    allow="autoplay; fullscreen"
+                                    style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                            </div>
+                        </div>
+                        <div class="col-full">
+                            <div class="caption">
+                            <div class="subhead">
+                                Microphone meets speaker
+                            </div>
+                            <p>This week I hooked up my speaker board to my microphone board. I decided to use the
+                                asynchronous serial bus method (aka the easy way). I was able to generate a random sound
+                                on my speaker board using the amplitude levels perceived by my microphone.
+                            </p>
+                            <p>The Arduino reads in the serial data from the microphone and sends it along its Tx line.
+                                Meanwhile, serial is also set up on the speaker board which interprets the signal and
+                                produces a sound at a frequency ten times the signal. My next step is to make sense of
+                                the serial data.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-full cell stroke">
+                    <div class="col-full">
+                        <div class="term">
+                            Week 13 - final project update
+                        </div>
+                    </div>
+                    <div class="col-half-1 title-imgs">
+                        <div class="img-relative-container full-height">
+                            <img src="files/img/week_13_update.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-half-2 cell">
+                        <div class="col-full">
+                            <div class="caption">
+                            <div class="subhead">
+                                Keeping things modular
+                            </div>
+                            <p>With Logan’s help I made progress encoding my microphone board with a beat detection
+                                algorithm using Damian Peckett's method. To implement the code, I had to swap out the
+                                ATtiny45 with a ATtiny85 chip as the Arduino IDE sketch was consuming over 90% of the
+                                T45 memory. I had to run Burn Bootloader command and reconnect four resistors that came
+                                off when I replaced the chip.
+                                The other breakthrough was an improvement to my electronics schema. Instead of trying to
+                                house everything on one board or sending all the signals to all the microprocessors, I
+                                ran the beat detection algorithm on my speaker board sending serial communication only
+                                when a beat is detected. It felt more manageable to keep things modular.</p>
+                            </div>
+                            </div>
+                        <div class="col-full padded-top">
+                            <div class="caption">
+                            <div class="subhead">
+                                Dream machine
+                            </div>
+                            <p>
+                                Because of finals I had to miss the recitation and group project. I took this time to
+                                ask myself: what is my dream machine? The answer is a wobbling hug bot that produces
+                                sounds at a comforting frequency and on occasion does dirty dishes. Complete with
+                                piezoelectric sensors the hug machine would be activated at moments of emotional lows.
+                            </p>
+                        </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
             </div>
         </div>
 
-        <div class="content margin-top-lg">
+        <div class="content margin-top-lg" id="notes">
             <div class="section-header">
                 <span class="section-title">Notes</span>
                 <p class="section-description">Random class wormholes</p>
             </div>
             <div class="main-content defs">
-                <div class="definition col-full">
+                <div class="definition col-full stroke">
                     <div class="term">Acrylonitrile Butadiene Styrene (ABS)</div>
                     <p>thermoplastic polymer, is amorphous and doesn't have a true melting point, can be carcinogenic at
                         higher temperatures (~400 °C)</p>
                 </div>
-                <div class="definition col-full">
+                <div class="definition col-full stroke">
                     <div class="term">Alternating Current (AC)</div>
                     <p>current in which the flow of electrical charge periodically reverses direction</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Anode</div>
+                    <p>the opposite of a cathode – positively charged electrode by which electrons leave a device</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Antoine Pevsner</div>
+                    <p>1886-1962 a pioneers of twentieth-century sculpture, was known for working with metal and the first to use a blowtorch, wrote the Realist Manifesto with his brother Naum Gabo</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Attack Decay Sustain Release (ADSR)</div>
+                    <p>a common envelope sound synthesis technique that controls the sound properties (namely attack and decay) at any point in its duration, can be a discrete circuit, module, or implemented in software. The earliest implementation of ADSR was by Hammond Novachord in 1938.</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Autocorrelation</div>
+                    <p> correlation of a signal to itself at various points in time – similarity between observations as a function of a time lag between them, useful for finding patterns.</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Auxetics</div>
+                    <p>structures or materials that have a negative Poisson's ratio, thus becoming thicker perpendicular to the force applied</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Bernhard Leitner</div>
+                    <p> known for pioneering the practice of "sound installation" allowing space to emerge from sound</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Capacitor</div>
+                    <p>stores electric energy in an electric field between two conductive plates</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Catalan surface</div>
+                    <p>spiral-looking surface all of whose planes are parallel to a fixed plane</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Cathode</div>
+                    <p>negatively charged electrode by which electrons enter a device. Typically the longer leg of an LED or the minus side of a battery</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Catmull-Clark algorithm</div>
+                    <p>a technique used primarily in computer graphics to create a smooth surface by subdivision</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Claude Shannon</div>
+                    <p>"the father of information theory"</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Clipper</div>
+                    <p>prevents the output of a circuit from reaching a certain voltage without impacting the remaining waveform</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Continuous Liquid Interface Production (CLIP)</div>
+                    <p>a fast photochemical process using uncured resin, exposure to oxygen, and a light source</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Cymatics</div>
+                    <p>from the Greek word "wave" is a term coined by Hans Jenny (1904-1972) to classify a study of modal vibrational</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Differential signal mode</div>
+                    <p>pair of traces between receiver and driver - one carries a negative signal while the other a positive one. These signals are equal and opposite, so there is no return signal from ground - what travels along one trace comes back the other. The USB operates in this mode</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Dijkstra's Algorithm</div>
+                    <p>conceived in 1956, is an algorithm for finding the shortest path between two nodes – a common variation includes starting with one node and mapping distances to all of the other nodes, then selecting the pair of closest nodes</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Diode</div>
+                    <p>an electrical device that allows current to move through it in one direction with greater ease</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Direct Current (DC)</div>
+                    <p>the opposite of AC, i.e., the flow of electrical charge is in one direction only</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Duty cycle</div>
+                    <p>percentage of a period in which a signal is active</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Eigenvector</div>
+                    <p>a linear transformation that does not change direction when a separate transformation is applied to it</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Electrical resistance</div>
+                    <p>measures the level of difficulty to pass an electrical current through a conductor, the inverse quantity is electrical conductance which measures the level of ease</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Electrochromism</div>
+                    <p>reversibly changing color by using bursts of change on susceptible materials</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Encapsulation</div>
+                    <p>OOP concept bringing together data and functions that manipulate this data - led to advancement in data hiding</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Eutectic system</div>
+                    <p>a mixture of fixed-proportion substances that melts and solidifies at a single temperature that is lower than the melting points of the separate constituents</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Fick's Laws of Diffusion</div>
+                    <p>describes diffusion, the first law was based on the assumption of a steady state in which particles move from areas of high concentrations to low concentration areas establishing an equilibrium</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Fourier's Law </div>
+                    <p>the law of heat conduction which states heat flows spontaneously from the hotter body to a cooler body converging toward a thermal equilibrium</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Galvanometer systems</div>
+                    <p>based on moving mirror technology, similar to what is used to create laser light shows</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Garolite</div>
+                    <p>fiberglass-epoxy laminate – high strength and stable under temperature fluctuations - a cheaper alternative to carbon fiber</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Georges Perec (1936-1982)</div>
+                    <p>was a French novelist, filmmaker, documentalist, and essayist his work is rooted in experimental word play, lists and attempts at classification</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">GPIO (General-Purpose Input/Output)</div>
+                    <p>a generic pin whose behavior is controllable by user at run time</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Graphine</div>
+                    <p>allotrope of carbon in the form of two dimensional, honey-comb lattice on atomic scale. It is about 100 times stronger than steel, conducts electricity and is nearly transparent</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Iannis Xenakis (1922-2001)</div>
+                    <p>Greek-French composer, music theorist, architect, and engineer who worked with Le Corbusier. He also pioneered the use of mathematical models in music and influenced in the development of electronic music</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">John Frazer</div>
+                    <p>an architect and researcher with who, in his notable work – An Evolutionary Architecture, emphasized the need for manual creation as a learning method for understanding computers</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Kirchhoff's Current Law (KCL)</div>
+                    <p>indicates that at any node in an electrical circuit, the sum of currents flowing into the circuit and the sum of currents flowing out of the circuit must equal</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Kirchhoff's Voltage Law (KVL)</div>
+                    <p>the sum of electrical potential differences (voltage) around any closed network is zero</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Linear-Feedback Shift Register (LFSR)</div>
+                    <p>a way of generating pseudo random numbers by producing a sequence that has a linear relationship to its previous state</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Lissajous Curve</div>
+                    <p>describes harmonic motion is a part of a series of curves investigated by Nathaniel Bowditch in 1815, and by Jules Antoine Lissajous in 1857</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Marching Cubes</div>
+                    <p>computer-graphics algorithm published in 1987 for extracting polygonal mesh from voxels</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Medial Axis</div>
+                    <p>also known as cut locus, is the set of all points having more than one closest point to the object's boundary</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Moore's Law</div>
+                    <p>an observation made in 1965 by Gordon Moore, co-founder of Intel, predicting that the number of transistors in a dense integrated circuit will double every two years. While Moore's law held true for several decades, the trend has slowed down as physical limits to transistor scaling has been reached</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Multidrop Bus (MDB)</div>
+                    <p>a bus in which all components are connected to the electrical circuit and an arbitration process determines which device sends information at any point, while the other devices listen for data</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Murray's law</div>
+                    <p>formula of relating the daughter branches to the radii of the parent branch of a lumen-based system – radius of the parent branch cubed equals to the sum of all the daughter radii cubed. The same principle has been applied to engineering in the design of minimum mass vascular networks carrying liquid healing agent to areas of skin damage</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Ohm's Law</div>
+                    <p>I = V/R current through a conductor between two points is directly proportional to the voltage across the two points</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Open</div>
+                    <p>the opposite of a short — lack of current between two nodes</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Operational Amplifier (Op-Amp)</div>
+                    <p>electronic devices that increase the power of a signal. Op-Amps can be either inverting or non-inverting </p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Ouvroir de littérature potentielle (OULIPO)</div>
+                    <p>"workshop of potential literature" was a collection of French writers and mathematicians who sought to create works using constrained writing techniques (e.g. poetry by algorithm), it was founded in 1960 with Perec being one of the prominent members</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Phase Lock Loop (PLL)</div>
+                    <p>a system that generates an output signal whose position is related to the position of an input signal by bringing back the output signal for comparison with input signal. Keeping the input and output phases in lock also keeps the respective frequencies the. PLL can also track an input frequency or generate a frequency that is a multiple of the input frequency</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Photolithography</div>
+                    <p>a process used in microfabrication to pattern parts of a thin film by transferring a geometric pattern from a photomask to a light-sensitive chemical on the substrate</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Polylactic Acid (PLA)</div>
+                    <p>biodegradable polyester typically made from corn starch, tapioca roots, or sugarcane. PLA has one of the highest bioplastic consumption volumes in the world. It is a common 3D printing filament. PLA is compostable</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Potentiometer</div>
+                    <p>three-pronged resistor with an adjustable voltage divider</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">PSOC (Programmable System-On-Chip)</div>
+                    <p>family of microcontroller intergraded circuits – good for analog requirements</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Pull-up/pull-down resistors</div>
+                    <p>used to prevent floating by ensuring that the MCU input pin is either in high (pulled to VCC) or low state (pulled to Ground). Pull-up resistor is more common of the two - it is frequently connected to high voltage (often allocated to VCC) and pull-down is often connected to ground</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Pulse-Width Modulation (PWM)</div>
+                    <p>encodes a message into a pulsating signal, its main use is to control the power supplied to things like motors</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Resonator</div>
+                    <p>creates an external clock signal for the microcontroller</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Schwarz–Christoffel Mapping</div>
+                    <p>conformal transformation of the upper half-plane onto the interior of a polygon</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Serial Peripheral Interface (SPI)</div>
+                    <p> synchronously sends data between microcontroller and the nodes (e.g. sensor, SD card) components by separating the clock and data lines</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Short</div>
+                    <p>happens when current travels down an unintended path between two nodes intended to be at different voltages. The most common short is when VCC and ground are connected</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Stereolithography</div>
+                    <p>uses a laser beam to 3D print layer by layer from a liquid polymer that hardens on contact, this generally results in a higher quality print. Common SLA printer manufacturers are Formlabs and Stratasys</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Theory of self-reproducing automata</div>
+                    <p>book by John von Neumann demonstrating the logical requirement for machine self-replication. His machine, the Universal Constructor, was designed in the 1940's without the use of a computer</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Trigger</div>
+                    <p> a circuit that controls another circuit, converts inputs into outputs. The output remains constant until the input is sufficiently altered</p>
+                </div>
+                <div class="definition col-full stroke">
+                    <div class="term">Vocoder</div>
+                    <p>originally developed in 1930's, vocoder is a category of speech processing that analyzes and synthesizes the human voice signal for audio data compression, voice encryption, etc. in order to reduce bandwidth</p>
                 </div>
             </div>
 
@@ -162,7 +1115,7 @@
         </div>
 
         <footer>
-            <div class="footer-container">
+            <div class="footer-container" id="about">
                 <div class="intro child">If I can do it, so can you</div>
                 <div class="child">
                     <div>
@@ -176,40 +1129,41 @@
         </footer>
         <div class="marquee col-full">
             <div>
-            <div class="marquee__inner">
-                <p>Happy making</p>
-                <p>Happy making</p>
-                <p>Happy making</p>
-                <p>Happy making</p>
-                <p>Happy making</p>
-                <p>Happy making</p>
-                <p>Happy making</p>
-                <p>Happy making</p>
-                <p>Happy making</p>
-                <p>Happy making</p>
-                <p>Happy making</p>
-                <p>Happy making</p>
-                <p>Happy making</p>
+                <div class="marquee__inner">
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                </div>
+                <div class="marquee__inner">
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                    <p>Happy making</p>
+                </div>
             </div>
-            <div class="marquee__inner">
-                <p>Happy making</p>
-                <p>Happy making</p>
-                <p>Happy making</p>
-                <p>Happy making</p>
-                <p>Happy making</p>
-                <p>Happy making</p>
-                <p>Happy making</p>
-                <p>Happy making</p>
-                <p>Happy making</p>
-                <p>Happy making</p>
-                <p>Happy making</p>
-                <p>Happy making</p>
-                <p>Happy making</p>
-            </div>
-        </div>
         </div>
 
     </div>
 </body>
 
+<script defer src="script.js"></script>
 </html>
