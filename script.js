@@ -2,6 +2,7 @@ const animStroke = document.querySelectorAll(".stroke");
 const nav = document.getElementById("top-nav");
 const hamburgerElems = document.getElementsByClassName("burger-line");
 const menuNav = document.getElementById("mobile-nav");
+let windowWidth = window.innerWidth;
 // console.log(windowHeight);
 let lastScroll = 0;
 
@@ -14,6 +15,23 @@ function initPage() {
 
   window.onload = function () {
     menuNav.classList.add("loaded");
+  }
+
+  window.onresize = function () {
+    windowWidth = window.innerWidth;
+
+    //get rid of menu and allow scroll when the screen is resized
+    if (windowWidth > 882) {
+      if (menuNav.classList.contains("active") || nav.classList.contains("active")) {
+        nav.classList.remove("active");
+        menuNav.classList.remove("active");
+
+        document.body.classList.remove("no-scroll");
+        Array.prototype.forEach.call(hamburgerElems, function (elem) {
+          elem.classList.remove("active");
+        });
+      }
+    }
   }
 
   // line animations
@@ -46,21 +64,21 @@ function initPage() {
 
 function showNav() {
   const currentScroll = window.pageYOffset;
-    // console.log(currentScroll);
+  // console.log('last: ' + currentScroll);
+  // console.log('last: ' + lastScroll);
+
   if (currentScroll <= 0) {
     nav.classList.remove("hide-nav-top");
     return;
   }
   if (
     currentScroll > lastScroll 
+    && lastScroll > 0
   ) {
-
     nav.classList.remove("hide-nav-top");
     nav.classList.add("display-nav-top");
-    // console.log("down");
   } else if (
     currentScroll < lastScroll 
-    && nav.classList.contains("display-nav-top")
   ) {
     //scroll up
     nav.classList.remove("display-nav-top");
