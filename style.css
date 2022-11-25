@@ -245,14 +245,16 @@ footer .footer-container {
     color: white;
     padding: 0.5rem 1.125rem 0.5625rem;
     border-radius: 100px;
-    outline: solid white;
+    outline: 1px solid white;
 }
 
 #menu-burger {
     width: fit-content;
 }
 
-.arrow, .hamburger {
+/* , .hamburger */
+
+.arrow {
     display: inline-block;
     position: relative;
     padding: 0;
@@ -269,7 +271,6 @@ footer .footer-container {
 /* hamburger menu */
 .hamburger {
     display: none;
-    width: 33px;
 }
 
 .burger-line, .arrow-line {
@@ -286,6 +287,9 @@ footer .footer-container {
 
 .burger-line {
     background-color: black;
+    display: block;
+    width: 33px;
+    margin-top: 0.5rem;
 }
 
 .burger-line.active {
@@ -293,11 +297,11 @@ footer .footer-container {
 }
 
 .burger-line.bottom {
-    transform: translateY(-0.5625rem);
+    transform: translateY(0);
 }
 
 .burger-line.top {
-    transform: translateY(0.5625rem);
+    transform: translateY(0);
 }
 
 .burger-line.bottom.active {
@@ -570,13 +574,13 @@ a.link-type-menu:hover::after, .definition.col-full.stroke.scrolled::after, .cel
 
 @keyframes burgerTop {
     0% {
-        transform: translateY(0.5625rem) rotateZ(0deg);
+        transform: translateY(0) rotateZ(0deg);
     }
     50% {
-        transform: translateY(0.0625rem) rotateZ(0deg);
+        transform: translateY(0.5625rem) rotateZ(0deg);
     }
     100% {
-        transform: translateY(0.0625rem) rotateZ(45deg);
+        transform: translateY(0.5625rem) rotateZ(45deg);
     }
 }
 
@@ -595,28 +599,28 @@ a.link-type-menu:hover::after, .definition.col-full.stroke.scrolled::after, .cel
 
 @keyframes burgerBottom {
     0% {
-        transform: translateY(-0.5625rem) rotateZ(0deg);
+        transform: translateY(0) rotateZ(0deg);
     }
     
     50% {
-        transform: translateY(-0.0625rem) rotateZ(0deg);
+        transform: translateY(-0.5625rem) rotateZ(0deg);
     }
     100% {
-        transform: translateY(-0.0625rem) rotateZ(-45deg);
+        transform: translateY(-0.5625rem) rotateZ(-45deg);
     }
 }
 
 
 @keyframes burgerTopReverse {
     0% {
-        transform: translateY(0.0625rem) rotateZ(45deg);
+        transform: translateY(0.5625rem) rotateZ(45deg);
     }
     
     50% {
-        transform: translateY(0.0625rem) rotateZ(0deg);
+        transform: translateY(0.5625rem) rotateZ(0deg);
     }
     100% {
-        transform: translateY(0.5625rem) rotateZ(0deg);
+        transform: translateY(0) rotateZ(0deg);
     }
 }
 
@@ -635,14 +639,14 @@ a.link-type-menu:hover::after, .definition.col-full.stroke.scrolled::after, .cel
 
 @keyframes burgerBottomReverse {
     0% {
-        transform: translateY(-0.0625rem) rotateZ(-45deg);
+        transform: translateY(-0.5625rem) rotateZ(-45deg);
     }
     
     50% {
-        transform: translateY(-0.0625rem) rotateZ(0deg);
+        transform: translateY(-0.5625rem) rotateZ(0deg);
     }
     100% {
-        transform: translateY(-0.5625rem) rotateZ(0deg);
+        transform: translateY(0) rotateZ(0deg);
     }
 }
 

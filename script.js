@@ -2,6 +2,7 @@ const animStroke = document.querySelectorAll(".stroke");
 const nav = document.getElementById("top-nav");
 const hamburgerElems = document.getElementsByClassName("burger-line");
 const menuNav = document.getElementById("mobile-nav");
+let windowWidth = window.innerWidth;
 // console.log(windowHeight);
 let lastScroll = 0;
 
@@ -14,6 +15,23 @@ function initPage() {
 
   window.onload = function () {
     menuNav.classList.add("loaded");
+  }
+
+  window.onresize = function () {
+    windowWidth = window.innerWidth;
+
+    //get rid of menu and allow scroll when the screen is resized
+    if (windowWidth > 882) {
+      if (menuNav.classList.contains("active") || nav.classList.contains("active")) {
+        nav.classList.remove("active");
+        menuNav.classList.remove("active");
+
+        document.body.classList.remove("no-scroll");
+        Array.prototype.forEach.call(hamburgerElems, function (elem) {
+          elem.classList.remove("active");
+        });
+      }
+    }
   }
 
   // line animations
@@ -53,6 +71,7 @@ function showNav() {
   }
   if (
     currentScroll > lastScroll 
+    && lastScroll > 0
   ) {
 
     nav.classList.remove("hide-nav-top");
