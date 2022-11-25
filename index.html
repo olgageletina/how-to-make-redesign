@@ -18,6 +18,13 @@
                 <li><a href="/#notes" class="link-type-menu"> Notes</a></li>
                 <li><a href="/#about" class="link-type-menu"> About </a></li>
             </ul>
+            <div id="menu-burger" onclick="toggleNav()">
+                <div class="hamburger">
+                    <div class="burger-line top"></div>
+                    <div class="burger-line center"></div>
+                    <div class="burger-line bottom"></div>
+                </div>
+            </div>
 
             
             <div class="cta">
@@ -31,10 +38,35 @@
                 </div>
             </a>
                 
-            </div>
-            
+            </div>            
 
         </div>
+
+                    <!-- mobile menu -->
+                    <div id="mobile-nav" aria-hidden="true">
+                        <ul class="mobile-links" onclick="toggleNav()">
+                            <li class="mobile-row">
+                                <a href="/#final" class="section-title">
+                                    Final project
+                                </a>
+                            </li>
+                            <li class="mobile-row">
+                                <a href="/#weekly-logs" class="section-title">
+                                    Weekly logs
+                                </a>
+                            </li>
+                            <li  class="mobile-row">
+                                <a href="/#notes" class="section-title">
+                                    Notes
+                                </a>
+                            </li>
+                            <li  class="mobile-row">
+                                <a href="/#about" class="burger-link section-title">
+                                    About
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
         <div class="header">
             <div class="intro">Hey, I’m Olga and this my page for <em>How to Make (almost) Anything</em> @MIT

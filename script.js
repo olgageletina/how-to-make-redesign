@@ -1,6 +1,7 @@
 const animStroke = document.querySelectorAll(".stroke");
 const nav = document.getElementById("top-nav");
-let windowHeight = window.innerHeight;
+const hamburgerElems = document.getElementsByClassName("burger-line");
+const menuNav = document.getElementById("mobile-nav");
 // console.log(windowHeight);
 let lastScroll = 0;
 
@@ -10,6 +11,10 @@ function initPage() {
   window.onscroll = function () {
     showNav();
   };
+
+  window.onload = function () {
+    menuNav.classList.add("loaded");
+  }
 
   // line animations
     const observer = new IntersectionObserver(
@@ -63,6 +68,33 @@ function showNav() {
     // console.log("up");
   }
   lastScroll = currentScroll;
+}
+
+function toggleNav() {
+  if (!menuNav.classList.contains("active")) {
+    nav.classList.add("active");
+    menuNav.classList.add("active");
+
+    //iterate through node list as if it was an array
+    Array.prototype.forEach.call(hamburgerElems, function (elem) {
+      elem.classList.add("active");
+      if (elem.classList.contains("inactive")) {
+        elem.classList.remove("inactive");
+      }
+    });
+
+    document.body.classList.add("no-scroll");
+  } else {
+    menuNav.classList.remove("active");
+    nav.classList.remove("active");
+
+    Array.prototype.forEach.call(hamburgerElems, function (elem) {
+      elem.classList.remove("active");
+      elem.classList.add("inactive");
+    });
+
+    document.body.classList.remove("no-scroll");
+  }
 }
 
 initPage();
