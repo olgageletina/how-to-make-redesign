@@ -573,10 +573,6 @@ a.link-type-menu:hover::after, .definition.col-full.stroke.scrolled::after, .cel
     100% {
         transform: rotate(-45deg) scale(0, 0.85);
     }
-/* 
-    100% {
-        transform: rotate(-45deg) scale(0.85, 0.85);
-    } */
 
 }
 
@@ -659,14 +655,45 @@ a.link-type-menu:hover::after, .definition.col-full.stroke.scrolled::after, .cel
 }
 
 
+/* stop marquee to prevent people from getting nauseous */
 @media (prefers-reduced-motion: reduce) {
     .marquee__inner {
         animation: none;
     }
 }
 
-/* single col layout */
+/* dark mode logic */
+@media (prefers-color-scheme: dark) {
+    .parent {
+        background-color: black;
+    }
 
+    .menu {
+        background-color: black;
+    }
+
+    a {
+        color: white;
+    }
+
+    .main-content {
+        border: 1px solid white;
+    }
+
+    body {
+        color: white;
+    }
+
+    a.link-type-menu::after, .definition.col-full.stroke:not(:last-child)::after, .cell.col-full.stroke:not(:last-child)::after, .menu::after {
+        background: white;
+    }
+
+    .burger-line {
+        background-color: white;
+    }
+}
+
+/* single col layout */
 @media screen and (max-width: 882px) {
     .col-half-1, .col-half-2, .col-third-1, .col-third-1-2, .col-third-2, .col-third-2-3, .col-third-3 {
         grid-column: 1/-1;
