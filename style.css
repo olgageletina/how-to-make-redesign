@@ -45,10 +45,21 @@ p {
 
 .main-content, .cell {
     display: grid;
+    /* grid-auto-flow: column; */
+    /* grid-auto-columns: minmax(0, 1fr); */
+    /* grid-template-columns:repeat(auto-fit, minmax(0, 1fr)); */
     grid-template-columns: repeat(12, 1fr);
-    gap: 0.75rem 2rem;
+    gap: 1rem 1rem;
     padding: 2rem;
 }
+
+/* .main-content {
+    gap: 0.75rem 0.75rem;
+}
+
+.cell {
+    gap: 0.75rem 0.75rem;
+} */
 
 .main-content {
     border: 1px solid black;
@@ -132,7 +143,7 @@ footer {
 }
 
 .header .intro {
-    padding: max(10vw, 10rem) 10vw;
+    padding: max(10vw, 5rem) max(5vw,1rem);
 }
 
 .definition {
@@ -147,7 +158,7 @@ footer {
 
 footer .footer-container {
     display: inline-block;
-    padding: max(10vw, 10rem) 10vw;
+    padding: max(10vw, 5rem) max(5vw,1rem);
 }
 
 .child {
@@ -243,6 +254,8 @@ footer .footer-container {
     color: white;
     padding: 0.5rem 1.125rem 0.5625rem;
     border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
     outline: 1px solid white;
 }
 
@@ -404,6 +417,14 @@ img {
 
 .caption>*:not(:last-child) {
     padding-bottom: 0.375rem;
+}
+
+.padding-bottom-2 {
+    padding-bottom: 1rem;
+}
+
+.margin-top-2 {
+    margin-top: 1rem;
 }
 
 .padding-bottom-1 {
@@ -714,15 +735,25 @@ a.link-type-menu:hover::after, .definition.col-full.stroke.scrolled::after, .cel
     }
 
     .content {
+        max-width: 100vw;
         padding: 0 1rem;
     }
 
     .section-header {
+        width: fit-content;
         padding: 0 1rem 1.5rem 1rem;
     }
 
     .main-content, .cell, .definition { 
         padding: 1rem;
+    }
+
+    .main-content, .cell {
+        grid-gap: 0.75rem 0.75rem;
+    }
+
+    .padded-top>* {
+        padding-top: 0.75rem;
     }
 
     .title-imgs .padding-top-4 {
