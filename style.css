@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=Inter&display=swap');
-
 body {
     padding: 0;
     margin: 0;
@@ -333,7 +331,7 @@ footer .footer-container {
     width: 100%;
     height: 100vh;
     display: flex;
-    position: absolute;
+    position: fixed;
     align-items: center; 
     top: 0;
     left: 0;
@@ -388,6 +386,7 @@ img {
     width: 100%;
     min-height: 1px;
     display: block;
+    height: auto;
 }
 
 
@@ -535,7 +534,7 @@ a.link-type-menu:hover::after, .definition.col-full.stroke.scrolled::after, .cel
 }
 
 .custom-dark {
-    background-color: #26272A;
+    background-color: #2A2B2E;
 }
 
 .custom-light {
