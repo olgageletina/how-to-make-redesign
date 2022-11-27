@@ -45,21 +45,10 @@ p {
 
 .main-content, .cell {
     display: grid;
-    /* grid-auto-flow: column; */
-    /* grid-auto-columns: minmax(0, 1fr); */
-    /* grid-template-columns:repeat(auto-fit, minmax(0, 1fr)); */
     grid-template-columns: repeat(12, 1fr);
     gap: 1rem 1rem;
     padding: 2rem;
 }
-
-/* .main-content {
-    gap: 0.75rem 0.75rem;
-}
-
-.cell {
-    gap: 0.75rem 0.75rem;
-} */
 
 .main-content {
     border: 1px solid black;
@@ -140,6 +129,7 @@ footer {
 
 .intro {
     font-size: max(5.5vw, 3rem);
+
 }
 
 .header .intro {
@@ -685,9 +675,6 @@ a.link-type-menu:hover::after, .definition.col-full.stroke.scrolled::after, .cel
 
 /* dark mode logic */
 @media (prefers-color-scheme: dark) {
-    .parent {
-        background-color: black;
-    }
 
     .menu {
         background-color: black;
@@ -703,6 +690,10 @@ a.link-type-menu:hover::after, .definition.col-full.stroke.scrolled::after, .cel
 
     body {
         color: white;
+        background-color: black;
+        padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+
+
     }
 
     a.link-type-menu::after, .definition.col-full.stroke:not(:last-child)::after, .cell.col-full.stroke:not(:last-child)::after, .menu::after {
@@ -741,8 +732,20 @@ a.link-type-menu:hover::after, .definition.col-full.stroke.scrolled::after, .cel
     }
 
     .section-header {
-        width: fit-content;
-        padding: 0 1rem 1.5rem 1rem;
+        justify-content: center;
+        padding: 1.5rem 0;
+    }
+
+    .section-title {
+        font-size: 2.25rem;
+    }
+
+    .term {
+        font-size: 1.625rem;
+    }
+
+    .section-description, .subhead {
+        font-size: 1.375rem;
     }
 
     .main-content, .cell, .definition { 
@@ -754,7 +757,11 @@ a.link-type-menu:hover::after, .definition.col-full.stroke.scrolled::after, .cel
     }
 
     .padded-top>* {
-        padding-top: 0.75rem;
+        padding-top: 2rem;
+    }
+
+    .margin-top-lg {
+        margin-top: 6rem;
     }
 
     .title-imgs .padding-top-4 {
@@ -774,6 +781,10 @@ a.link-type-menu:hover::after, .definition.col-full.stroke.scrolled::after, .cel
 
     .menu .main {
         display: none;
+    }
+
+    .parent {
+        padding-top: 87px;
     }
 
 }
