@@ -133,7 +133,8 @@ footer {
 }
 
 .header .intro {
-    padding: max(10vw, 5rem) max(5vw,1rem);
+    padding: max(10vw, 5rem) max(5vw,1rem) max(10vw, 7.5rem) max(5vw, 1rem);
+    margin-bottom: 2.25rem;
 }
 
 .definition {
@@ -148,7 +149,8 @@ footer {
 
 footer .footer-container {
     display: inline-block;
-    padding: max(10vw, 5rem) max(5vw,1rem);
+    padding: max(10vw, 5rem) max(5vw,1rem) max(10vw, 6rem) max(5vw, 1rem);
+    margin-bottom: 1rem;
 }
 
 .child {
@@ -704,6 +706,10 @@ a.link-type-menu:hover::after, .definition.col-full.stroke.scrolled::after, .cel
     .burger-line {
         background-color: white;
     }
+
+    .section-header {
+        border-top: 1px solid white;
+    }
 }
 
 /* single col layout */
@@ -733,6 +739,7 @@ a.link-type-menu:hover::after, .definition.col-full.stroke.scrolled::after, .cel
     }
 
     .section-header {
+        border-top: 1px solid black;
         justify-content: center;
         padding: 1.5rem 0;
     }
@@ -749,8 +756,13 @@ a.link-type-menu:hover::after, .definition.col-full.stroke.scrolled::after, .cel
         font-size: 1.375rem;
     }
 
+    .main-content {
+        border-left: none;
+        border-right: none;
+    }
+
     .main-content, .cell, .definition { 
-        padding: 1rem;
+        padding: 1rem 0;
     }
 
     .main-content, .cell {
@@ -786,6 +798,10 @@ a.link-type-menu:hover::after, .definition.col-full.stroke.scrolled::after, .cel
 
     .parent {
         padding-top: 87px;
+    }
+
+    footer .footer-container, .header .intro {
+        margin: 0;
     }
 
 }
