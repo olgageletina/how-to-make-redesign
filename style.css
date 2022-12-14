@@ -129,6 +129,7 @@ footer {
 
 .intro {
     font-size: max(5.5vw, 3rem);
+    line-height: 1.2;
 
 }
 
@@ -759,6 +760,7 @@ a.link-type-menu:hover::after, .definition.col-full.stroke.scrolled::after, .cel
     .main-content {
         border-left: none;
         border-right: none;
+        border-bottom: none;
     }
 
     .main-content, .cell, .definition { 
@@ -771,10 +773,6 @@ a.link-type-menu:hover::after, .definition.col-full.stroke.scrolled::after, .cel
 
     .padded-top>* {
         padding-top: 2rem;
-    }
-
-    .margin-top-lg {
-        margin-top: 6rem;
     }
 
     .title-imgs .padding-top-4 {
@@ -802,6 +800,10 @@ a.link-type-menu:hover::after, .definition.col-full.stroke.scrolled::after, .cel
 
     footer .footer-container, .header .intro {
         margin: 0;
+    }
+
+    footer .footer-container .child p {
+        padding-top: 1rem;
     }
 
 }
