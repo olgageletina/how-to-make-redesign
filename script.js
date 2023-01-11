@@ -64,26 +64,26 @@ function initPage() {
 
 function showNav() {
   const currentScroll = window.pageYOffset;
-  // console.log('last: ' + currentScroll);
-  // console.log('last: ' + lastScroll);
-
-  if (currentScroll <= 0) {
-    nav.classList.remove("hide-nav-top");
-    return;
-  }
   if (
     currentScroll > lastScroll 
-    && lastScroll > 0
+    && nav.classList.contains("hide-nav-top")
   ) {
+    console.log("second conditional " + nav.classList);
+    //scroll down
     nav.classList.remove("hide-nav-top");
     nav.classList.add("display-nav-top");
-  } else if (
+    console.log("second conditional " + nav.classList);
+  } 
+  else if (
     currentScroll < lastScroll 
   ) {
     //scroll up
     nav.classList.remove("display-nav-top");
     nav.classList.add("hide-nav-top");
-    // console.log("up");
+    console.log("third conditional " + nav.classList);
+    if (currentScroll <= 0) {
+      nav.classList.remove("hide-nav-top");
+    }
   }
   lastScroll = currentScroll;
 }
