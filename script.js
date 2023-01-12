@@ -3,7 +3,6 @@ const nav = document.getElementById("top-nav");
 const hamburgerElems = document.getElementsByClassName("burger-line");
 const menuNav = document.getElementById("mobile-nav");
 let windowWidth = window.innerWidth;
-// console.log(windowHeight);
 let lastScroll = 0;
 
 // initialize page
@@ -67,12 +66,12 @@ function showNav() {
   if (
     currentScroll > lastScroll 
     && nav.classList.contains("hide-nav-top")
+    //prevents nav moving on initial scroll
   ) {
-    console.log("second conditional " + nav.classList);
     //scroll down
     nav.classList.remove("hide-nav-top");
     nav.classList.add("display-nav-top");
-    console.log("second conditional " + nav.classList);
+    // console.log("second conditional " + nav.classList);
   } 
   else if (
     currentScroll < lastScroll 
@@ -80,9 +79,10 @@ function showNav() {
     //scroll up
     nav.classList.remove("display-nav-top");
     nav.classList.add("hide-nav-top");
-    console.log("third conditional " + nav.classList);
+    // console.log("third conditional " + nav.classList);
     if (currentScroll <= 0) {
       nav.classList.remove("hide-nav-top");
+      //remove stroke when scrolled all the way up
     }
   }
   lastScroll = currentScroll;
